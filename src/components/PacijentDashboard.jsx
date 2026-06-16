@@ -61,33 +61,31 @@ function PacijentDashboard({ setStranica }) {
       <div style={{
         background: 'linear-gradient(135deg, var(--plava2) 0%, var(--plava3) 100%)',
         borderRadius: 20, padding: '32px 40px', marginBottom: 28,
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         border: '1px solid rgba(141,188,199,0.3)',
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
-            <div style={{
-              width: 64, height: 64,
-              background: 'linear-gradient(135deg, var(--plava1), var(--plava2))',
-              border: '2px solid rgba(255,255,255,0.6)',
-              borderRadius: '50%', display: 'flex', alignItems: 'center',
-              justifyContent: 'center', fontSize: 22, fontWeight: 700, color: 'var(--tamna)',
-              flexShrink: 0,
-            }}>
-              {ime?.[0]}{prezime?.[0]}
-            </div>
-            <div>
-              <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--tamna)' }}>{ime} {prezime}</h2>
-              <p style={{ fontSize: 13, color: 'var(--tekst2)', marginTop: 3 }}>Karton pacijenta</p>
-            </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+          <div style={{
+            width: 64, height: 64,
+            background: 'linear-gradient(135deg, var(--plava1), var(--plava2))',
+            border: '2px solid rgba(255,255,255,0.6)',
+            borderRadius: '50%', display: 'flex', alignItems: 'center',
+            justifyContent: 'center', fontSize: 22, fontWeight: 700, color: 'var(--tamna)'
+          }}>
+            {ime?.[0]}{prezime?.[0]}
           </div>
-          <div className="dashboard-dugmad">
-            <button className="btn btn-outline" onClick={() => setStranica('promena-lozinke')}>
-              🔒︎ Promeni lozinku
-            </button>
-            <button className="btn btn-primary" onClick={() => setStranica('zakazivanje')}>
-              + Zakaži pregled
-            </button>
+          <div>
+            <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--tamna)' }}>{ime} {prezime}</h2>
+            <p style={{ fontSize: 13, color: 'var(--tekst2)', marginTop: 3 }}>Karton pacijenta</p>
           </div>
+        </div>
+        <div style={{ display: 'flex', gap: 10 }}>
+          <button className="btn btn-outline" onClick={() => setStranica('promena-lozinke')}>
+            🔒︎ Promeni lozinku
+          </button>
+          <button className="btn btn-primary" onClick={() => setStranica('zakazivanje')}>
+            + Zakaži pregled
+          </button>
         </div>
       </div>
 

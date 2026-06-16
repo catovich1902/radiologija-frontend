@@ -38,12 +38,12 @@ function OOrdinaciji({ setStranica }) {
       {/* HERO */}
       <div style={{ background: 'linear-gradient(135deg, var(--plava2) 0%, var(--plava3) 100%)', borderRadius: 28, padding: '60px 48px', marginBottom: 48, position: 'relative', overflow: 'hidden', border: '1px solid rgba(141,188,199,0.4)' }}>
         <div style={{ position: 'absolute', top: -80, right: -80, width: 300, height: 300, background: 'radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 70%)' }} />
-        <div className="o-ordinaciji-hero-grid" style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center', gap: 32 }}>
+        <div className="o-hero-grid">
           <div>
             <span style={{ display: 'inline-flex', background: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.9)', color: '#0f2b33', fontSize: 12, fontWeight: 600, padding: '6px 14px', borderRadius: 20, marginBottom: 20 }}>✦ O nama</span>
             <h1 style={{ fontSize: 38, fontWeight: 600, color: '#0f2b33', marginBottom: 14, fontFamily: 'Fraunces, serif', lineHeight: 1.2 }}>Radiološka ordinacija<br />Dr Martinović</h1>
             <p style={{ fontSize: 16, color: '#4a6b75', lineHeight: 1.7, maxWidth: 520, marginBottom: 28 }}>Vrhunska dijagnostička usluga sa najmodernijom opremom u Tutinu. Brzi nalazi, pažljiv pristup, pouzdani rezultati.</p>
-            <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
               <button className="btn btn-primary" onClick={() => setStranica('zakazivanje')}>Zakaži pregled →</button>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(255,255,255,0.6)', borderRadius: 30, padding: '10px 20px', border: '1px solid rgba(255,255,255,0.9)' }}>
                 <span style={{ fontSize: 18 }}>★</span>
@@ -98,7 +98,7 @@ function OOrdinaciji({ setStranica }) {
 
       {/* USLUGE */}
       <p className="section-title">Usluge i cene</p>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 48 }}>
+      <div className="o-usluge-grid">
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {USLUGE.map((u, i) => (
             <div key={i} onClick={() => setAktivnaUsluga(i)} style={{ padding: '18px 20px', borderRadius: 16, cursor: 'pointer', border: `1.5px solid ${aktivnaUsluga === i ? 'var(--plava1)' : 'rgba(141,188,199,0.25)'}`, background: aktivnaUsluga === i ? 'linear-gradient(135deg, var(--plava4), var(--plava5))' : 'linear-gradient(135deg, #fff, var(--plava5))', display: 'flex', alignItems: 'center', gap: 14, transition: 'all 0.2s', boxShadow: aktivnaUsluga === i ? '0 4px 20px rgba(141,188,199,0.3)' : 'none' }}>
@@ -152,16 +152,13 @@ function OOrdinaciji({ setStranica }) {
             </div>
           ))}
         </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23347.783705627295!2d20.312215979875404!3d42.98937455301572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135327f61a99caeb%3A0xadf5b829117a6c4f!2sTutin!5e0!3m2!1sen!2srs!4v1778948049070!5m2!1sen!2srs"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23347.783705627295!2d20.312215979875404!3d42.98937455301572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135327f61a99caeb%3A0xadf5b829117a6c4f!2sTutin!5e0!3m2!1sen!2srs!4v1778948049070!5m2!1sen!2srs"
           width="100%" height="340" style={{ border: 0, display: 'block' }}
-          allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-          title="Lokacija ordinacije"
-        />
+          allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Lokacija ordinacije" />
       </div>
 
       {/* CTA */}
-      <div style={{ background: 'linear-gradient(135deg, var(--plava2) 0%, var(--plava3) 100%)', borderRadius: 24, padding: '40px 48px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', border: '1px solid rgba(141,188,199,0.4)' }}>
+      <div className="cta-flex" style={{ background: 'linear-gradient(135deg, var(--plava2) 0%, var(--plava3) 100%)', borderRadius: 24, padding: '40px 48px', border: '1px solid rgba(141,188,199,0.4)' }}>
         <div>
           <h3 style={{ color: '#0f2b33', fontSize: 24, fontWeight: 600, marginBottom: 8, fontFamily: 'Fraunces, serif' }}>Zakažite pregled danas</h3>
           <p style={{ color: '#4a6b75', fontSize: 14 }}>Brzo, jednostavno i pouzdano — rezultati isti dan</p>
