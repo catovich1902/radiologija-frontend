@@ -38,7 +38,7 @@ function OOrdinaciji({ setStranica }) {
       {/* HERO */}
       <div style={{ background: 'linear-gradient(135deg, var(--plava2) 0%, var(--plava3) 100%)', borderRadius: 28, padding: '60px 48px', marginBottom: 48, position: 'relative', overflow: 'hidden', border: '1px solid rgba(141,188,199,0.4)' }}>
         <div style={{ position: 'absolute', top: -80, right: -80, width: 300, height: 300, background: 'radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 70%)' }} />
-        <div style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center', gap: 32 }}>
+        <div className="o-ordinaciji-hero-grid" style={{ position: 'relative', zIndex: 1, display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center', gap: 32 }}>
           <div>
             <span style={{ display: 'inline-flex', background: 'rgba(255,255,255,0.7)', border: '1px solid rgba(255,255,255,0.9)', color: '#0f2b33', fontSize: 12, fontWeight: 600, padding: '6px 14px', borderRadius: 20, marginBottom: 20 }}>✦ O nama</span>
             <h1 style={{ fontSize: 38, fontWeight: 600, color: '#0f2b33', marginBottom: 14, fontFamily: 'Fraunces, serif', lineHeight: 1.2 }}>Radiološka ordinacija<br />Dr Martinović</h1>

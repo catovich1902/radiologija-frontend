@@ -307,6 +307,36 @@ body {
   .o-ordinaciji { padding: 0; }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+    padding: 32px 20px !important;
+    min-height: auto !important;
+  }
+
+  .hero h1 {
+    font-size: 36px !important;
+  }
+
+  .o-ordinaciji-hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .o-ordinaciji-hero-grid > div:last-child {
+    display: none !important;
+  }
+
+  .dashboard-dugmad {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dashboard-dugmad .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 480px) {
   .hero h1 { font-size: 28px; }
   .navbar-logo img { width: 36px; height: 36px; }
@@ -316,4 +346,9 @@ body {
   .btn { padding: 12px 20px; font-size: 14px; }
   .form-card { padding: 20px 16px; }
   .section-title { font-size: 18px; }
+}
+
+.dashboard-dugmad {
+  display: flex;
+  gap: 10px;
 }
