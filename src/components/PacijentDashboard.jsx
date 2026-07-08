@@ -79,14 +79,14 @@ function PacijentDashboard({ setStranica }) {
             <p style={{ fontSize: 13, color: 'var(--tekst2)', marginTop: 3 }}>Karton pacijenta</p>
           </div>
         </div>
-        <div style={{ display: 'flex', gap: 10 }}>
-          <button className="btn btn-outline" onClick={() => setStranica('promena-lozinke')}>
-            🔒︎ Promeni lozinku
-          </button>
-          <button className="btn btn-primary" onClick={() => setStranica('zakazivanje')}>
-            + Zakaži pregled
-          </button>
-        </div>
+        <div className="dashboard-dugmad">
+  <button className="btn btn-outline" onClick={() => setStranica('promena-lozinke')}>
+    🔒︎ Promeni lozinku
+  </button>
+  <button className="btn btn-primary" onClick={() => setStranica('zakazivanje')}>
+    + Zakaži pregled
+  </button>
+</div>
       </div>
 
       {greska && <div className="error-msg">{greska}</div>}

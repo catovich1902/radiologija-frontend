@@ -8,10 +8,10 @@ const USLUGE = [
 ];
 
 const RAZLOZI = [
-  { ikona: '🏆', naziv: 'Iskustvo', opis: 'Specijalizovana praksa u dijagnostičkoj radiologiji' },
+  { ikona: '⛨', naziv: 'Iskustvo', opis: 'Specijalizovana praksa u dijagnostičkoj radiologiji' },
   { ikona: '⚡︎', naziv: 'Brzi rezultati', opis: 'Nalazi dostupni isti dan — bez čekanja' },
   { ikona: '🖳', naziv: 'Moderna oprema', opis: 'Najsavremenija dijagnostička tehnologija' },
-  { ikona: '👤', naziv: 'Pažnja prema pacijentu', opis: 'Individualni pristup svakom pacijentu' },
+  { ikona: '⚕', naziv: 'Pažnja prema pacijentu', opis: 'Individualni pristup svakom pacijentu' },
   { ikona: '🗓', naziv: 'Online zakazivanje', opis: 'Zakažite termin za nekoliko sekundi' },
   { ikona: '🏠︎', naziv: 'Dostupnost', opis: 'Lako dostupna lokacija u centru Tutina' },
 ];

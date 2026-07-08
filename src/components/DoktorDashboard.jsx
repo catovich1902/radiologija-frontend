@@ -59,12 +59,7 @@ function DoktorDashboard() {
   return (
     <div>
       {/* HEADER */}
-      <div style={{
-        background: 'linear-gradient(135deg, #ffffff 0%, #C4E1E6 100%)',
-        borderRadius: 24, padding: '40px 48px', marginBottom: 28,
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        border: '1px solid rgba(141,188,199,0.3)'
-      }}>
+      <div className="dashboard-header doktor-header">
         <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
           <div style={{
             width: 72, height: 72,
@@ -84,7 +79,7 @@ function DoktorDashboard() {
         </div>
 
         {podaci && (
-          <div style={{ display: 'flex', gap: 16 }}>
+          <div className="doktor-statistike">
             {[
               { val: pregledaDanas.length, lbl: 'Danas' },
               { val: pregledaBuduci.length, lbl: 'Predstojeći' },
